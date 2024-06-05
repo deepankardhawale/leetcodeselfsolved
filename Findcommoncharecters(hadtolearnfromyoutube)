@@ -1,0 +1,12 @@
+from collections import Counter
+words = ['bella','label','roller']
+cnt = Counter(words[0])
+l1 = []
+for w in words:
+    cnt_1 = Counter(w)
+    for count in cnt:
+        cnt[count] = min(cnt[count],cnt_1[count])
+for i in cnt.keys():
+    for j in range(0,cnt[i]):
+        l1.append(i)
+print(l1)
