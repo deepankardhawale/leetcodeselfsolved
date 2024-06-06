@@ -1,0 +1,16 @@
+nums1 = map(int, input().split(','))
+nums1 = list(nums1)
+m = int(input('m:'))
+nums2 = map(int, input().split(','))
+nums2 = list(nums2)
+n = int(input())
+
+x= 0
+for i in range(m,len(nums1)):
+    nums1[i] = nums2[x]
+    x += 1
+
+nums1.sort()
+
+
+print(nums1)
