@@ -1,0 +1,54 @@
+n = int(input())
+n = list(str(n))
+l = len(n)
+# first = 0
+# if (l)%2 == 0:
+#         mid = l/2
+#         l1 = []
+#         l2 = []
+#         last = (l-1)
+#         for i in range(0,int(mid)):
+#             l1.append(n[i])
+#             l2.append(n[last])
+#             last -= 1
+#         l1.reverse()
+#         m = 0
+#         for i in range((int(mid)),l):
+#             l2.append(l1[m])
+#             m += 1
+# if (l)%2 == 1:
+#     mid = int(l/2)
+#     l1 = []
+#     l2 = []
+#     last=(l-1)
+#     for i in range(mid):
+#         l1.append(n[i])
+#         l2.append(n[last])
+#         last -= 1
+#     l1.reverse()
+#     l2.append(n[mid])
+#     m = 0
+#     for i in range((int(mid)+1),l):
+#         l2.append(l1[m])
+#         m += 1
+#
+# if n == l2:
+#     print("YES")
+# else:
+#     print("NO")
+# l1 = []
+# for i in range((l)-1,-1,-1):
+#     print(n[i])
+#     l1.append(n[i])
+# print(l1)
+# if l1 == n:
+#     print(True)
+# else:
+#     print(False)
+----------------------------------
+print(n)
+len_n = len(n)
+sum = 0
+for i in range((len_n-1),-1,-1):
+    sum += int(n[i])*(10**i)
+print(sum)
