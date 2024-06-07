@@ -1,0 +1,15 @@
+l1 = ["a","b","c"]
+str1 =  "aadsfasf absbs bbab cadsfafs"
+str_list = str1.split(' ')
+for i in range(len(str_list)):
+    str1 =''
+    word = str_list[i]
+    for j in range(len(word)):
+        str1 += word[j]
+        if str1 in l1:
+            str_list[i] =str1
+            break
+        else:
+            continue
+output = ' '.join(str_list)
+print(output)
