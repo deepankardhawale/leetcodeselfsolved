@@ -1,0 +1,9 @@
+strs = ["flowers","flow","fly"]
+str1 = ''
+for i in range(len(strs)):
+    for word in strs:
+        if i == len(word)-1 or word[i] != strs[0][i]:
+            print(str1)
+    str1 += strs[0][i]
+print(str1)
+
