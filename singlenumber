@@ -1,0 +1,9 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        l1 = []
+        for i in nums:
+            if i not in l1:
+                l1.append(i)
+            elif i in l1:
+                l1.remove(i)
+        return l1[0]
