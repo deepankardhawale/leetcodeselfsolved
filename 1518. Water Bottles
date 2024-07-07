@@ -1,0 +1,10 @@
+def numWaterBottles(numBottles, numExchange):
+    div = 0
+    complete = numBottles
+    sum1 = numBottles
+    while sum1>=numExchange:
+        div = sum1//numExchange
+        sum1 = ((sum1//numExchange)+(sum1%numExchange))
+        complete += div
+    return complete
+print(numWaterBottles(2,3))
