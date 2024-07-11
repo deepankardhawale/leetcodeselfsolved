@@ -1,0 +1,17 @@
+def reverse_sublist(lst, start, end):
+    while start<end:
+        lst[start],lst[end] = lst[end],lst[start]
+        start += 1
+        end -= 1
+class Solution:
+    def reverseParentheses(self, s: str) -> str:
+        ls = list(s)
+        stack = []
+        for i in range(len(ls)):
+            if ls[i]=='(':
+                stack.append(i)
+            if ls[i]==')':
+                x = stack.pop()
+                reverse_sublist(ls,x+1,i-1)
+        str = ''.join([s for s in ls if s!='(' and s!=')'])
+        return str
