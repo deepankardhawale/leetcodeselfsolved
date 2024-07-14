@@ -1,0 +1,16 @@
+class Solution:
+    def checkRecord(self, s: str) -> bool:
+        a = 0
+        b =0
+        x = len(s)
+        for i in range(x):
+            if s[i] == 'A':
+                a+=1
+            if s[i] == 'L' and i + 1 < x:
+                if s[i] == 'L' and s[i+1]=='L':
+                    b+=1
+                if s[i]=='L' and s[i+1] != 'L':
+                    b=0
+            if b >=2 or a >=2:
+                return False
+        return True
