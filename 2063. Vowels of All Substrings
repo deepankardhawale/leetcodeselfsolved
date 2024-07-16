@@ -1,0 +1,10 @@
+class Solution:
+    def countVowels(self, word: str) -> int:
+        n = len(word)
+        str1 = 'aeiou'
+        count = 0
+        for i in range(n):
+            if word[i] in str1:
+                l = n-i
+                count += ((i*l)+l)
+        return count
